@@ -1,66 +1,76 @@
-import React from 'react';
-import {Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-lg p-4 sticky top-0 z-20">
+    <nav className="bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 sticky top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
-      <div className="text-2xl font-bold text-gray-900 transition-all duration-300 hover:text-blue-500 hover:scale-110 cursor-pointer">
+        <Link to="/" className="text-2xl font-bold text-gray-900 transition-all duration-300 hover:text-blue-500 hover:scale-110 cursor-pointer">
           SDS Technologies
+        </Link>
+
+        {/* Hamburger icon for mobile */}
+        <div className="block lg:hidden">
+          <button onClick={toggleMenu} className="text-gray-900 hover:text-gray-700 focus:outline-none">
+            <FaBars className="text-3xl" />
+          </button>
         </div>
-        <ul className="flex space-x-4 gap-5">
-  <li>
-    <NavLink 
-      to="/" 
-      className={({ isActive }) => 
-        isActive ? 'text-blue-500 border-b-2 border-blue-500 pb-2 font-bold'  : 'text-gray-900 hover:text-gray-700'
-      }
-    >
-      Home
-    </NavLink>
-  </li>
-  <li>
-    <NavLink 
-      to="/about" 
-      className={({ isActive }) => 
-        isActive ? 'text-blue-500 border-b-2 border-blue-500 pb-2 font-bold' : 'text-gray-900 hover:text-gray-700'
-      }
-    >
-      About
-    </NavLink>
-  </li>
-  <li>
-    <NavLink 
-      to="/services" 
-      className={({ isActive }) => 
-        isActive ? 'text-blue-500 border-b-2 border-blue-500 pb-2 font-bold' : 'text-gray-900 hover:text-gray-700'
-      }
-    >
-      Services
-    </NavLink>
-  </li>
-  <li>
-    <NavLink 
-      to="/courses" 
-      className={({ isActive }) => 
-        isActive ? 'text-blue-500 border-b-2 border-blue-500 pb-2 font-bold' : 'text-gray-900 hover:text-gray-700'
-      }
-    >
-      Courses Offered
-    </NavLink>
-  </li>
-</ul>
 
-        <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:scale-110 text-white font-bold py-2 px-4 rounded-full text-lg">
-  <Link to="/contact" className="text-white">Contact Us</Link>
-</button>
-
+        {/* Navigation links */}
+        <ul className={`flex lg:flex space-x-4 gap-5 ${isMenuOpen ? 'flex' : 'hidden'} lg:flex`}>
+          <li>
+            <NavLink
+              to="/"
+              exact
+              activeClassName="text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
+              className="text-gray-900 hover:text-gray-700 text-lg"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              activeClassName="text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
+              className="text-gray-900 hover:text-gray-700 text-lg"
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/services"
+              activeClassName="text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
+              className="text-gray-900 hover:text-gray-700 text-lg"
+            >
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/courses"
+              activeClassName="text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
+              className="text-gray-900 hover:text-gray-700 text-lg"
+            >
+              Courses Offered
+            </NavLink>
+          </li>
+          <li>
+            <Link to="/contact" className="text-gray-900 hover:text-gray-700 text-lg">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
 }
 
 export default Header;
-
-
-{/* hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 */}
