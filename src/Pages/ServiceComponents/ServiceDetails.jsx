@@ -158,7 +158,7 @@ function ServiceDetail() {
       </div>
 
       {service.component && (
-        <div className="my-6 p-10 flex justify-center items-center bg-gray-200 rounded-lg shadow-md" data-aos="fade-up">
+        <div className="my-6 p-10 bg-gray-200 rounded-lg shadow-md" data-aos="fade-up">
           {service.component}
         </div>
       )}

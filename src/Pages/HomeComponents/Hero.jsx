@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
-import HeroBg from '../../assets/HeroLayout.jpeg';
+import HeroBg from '../../assets/HeroLayout.jpg';
+import Slider from 'react-slick';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import "../../index.css";
 
 const Hero = () => {
   useEffect(() => {
@@ -10,18 +14,41 @@ const Hero = () => {
     });
   }, []);
 
+  const settings = {
+    dots: false,
+    arrows:false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+  };
+
   return (
-    <div className="relative mt-20 h-screen w-full flex items-center justify-center bg-slate-500" data-aos="fade-in">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-50 hover:blur-sm"
-        style={{ backgroundImage: `url(${HeroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        data-aos="zoom-in"
-        data-aos-delay="100"
-      ></div>
-      <div className="relative z-10 text-center p-5 " data-aos="fade-up" data-aos-delay="300">
-        <h1 className="text-5xl font-bold mb-4" data-aos="slide-right" data-aos-delay="500">
-          Welcome to <span className='text-red-400 font-extrabold' >SDS</span> Technologies
-        </h1>
+    <section className="relative mt-20 h-screen w-full flex items-center justify-center hero-section">
+    <div className="absolute inset-0 mx-auto bg-cover bg-center opacity-50 animate-bg-image" style={{ backgroundImage: `url(${HeroBg})` }}></div>
+
+
+      <div className="relative z-10 text-center p-5 w-full" data-aos="fade-up" data-aos-delay="300">
+        <Slider {...settings}>
+          <div>
+            <h1 className="text-5xl font-bold mb-4" data-aos="fade-right" data-aos-delay="500">
+              Welcome to <span className='text-red-400 font-extrabold'>SDS</span> Technologies
+            </h1>
+          </div>
+          <div>
+            <h1 className="text-5xl font-bold mb-4" data-aos="fade-left" data-aos-delay="500">
+              Explore <span className='text-red-400 font-extrabold'>Our Projects</span>
+            </h1>
+          </div>
+          <div>
+            <h1 className="text-5xl font-bold mb-4" data-aos="fade" data-aos-delay="500">
+              About <span className='text-red-400 font-extrabold'>Us</span>
+            </h1>
+          </div>
+        </Slider>
         <p className="text-2xl mb-8">
           We're glad you're here. Discover amazing content and join our community!
         </p>
@@ -29,7 +56,7 @@ const Hero = () => {
           Get Started
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
