@@ -8,7 +8,7 @@ function Header() {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
-    <nav className="bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 sticky top-0 z-20">
+    <nav className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 sticky top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="/"
@@ -68,6 +68,14 @@ function Header() {
             </NavLink>
           </li>
           <li>
+
+              {/* 
+                       <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:scale-110 text-white font-bold py-2 px-4 rounded-full text-lg">
+  <Link to="/contact" className="text-white">Contact Us</Link>
+</button>
+
+              */}
+
             <Link to="/contact" className="text-gray-900 hover:text-gray-700 text-lg">
               Contact Us
             </Link>

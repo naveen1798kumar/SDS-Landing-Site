@@ -62,7 +62,7 @@ function ServicesComponent() {
   return (
     <>
         <div className="relative h-screen w-full flex justify-center items-center " style={{ backgroundImage: `url(${Image1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <h1 className="text-5xl font-bold" data-aos="zoom-in">Services we Offer</h1>
+        <h1 className='w-[650px] font-bold  mt-20 bg-gradient-to-r(rgb(43,21,93),rgb(117,65,191)) text-center mb-5 text-5xl md:text-6xl lg:text-6xl' data-aos="zoom-in">Services we Offer</h1>
       </div>
 
       <div className='flex justify-center items-center h-screen w-full'>
