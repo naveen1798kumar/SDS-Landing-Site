@@ -4,7 +4,7 @@ import nplogo from '../../assets/nplogo.jfif'
 const Aboutcom5 = () => {
   return (
     <>
-    <div className='w-[100%] h-auto'>
+    <div className='w-[100%] h-auto'data-aos="fade-up" data-aos-delay="200">
         <div className='w-[100%] h-auto flex flex-col justify-center items-center py-5'>
             <div className='w-[60%] h-auto text-center  py-5'>
             <h2 className='font-semibold text-4xl text-gray-900 mb-5'>Trusted by Great Brands</h2>
