@@ -26,4 +26,16 @@
     animation: moveBackground 10s ease infinite;
   }
   
+  @keyframes spinX {
+    from {
+      transform: rotateX(0deg);
+    }
+    to {
+      transform: rotateX(360deg);
+    }
+  }
+  
+  .spin-x {
+    animation: spinX 2s linear infinite;
+  }
   

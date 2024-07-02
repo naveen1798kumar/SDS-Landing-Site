@@ -98,11 +98,15 @@ const CoursesDetails = () => {
             
             {course.map((view) => (
               <div className="box w-[350px] h-[400px] text-center bg-white  rounded-xl hover:text-blue-500 shadow-black shadow  ">
+                <div>
                 <img
                   className="w-[400px] h-[250px] rounded-xl "
                   src={view.image}
                   alt=""
                 />
+                </div>
+
+                <div>
                 <h2 className="head font-semibold text-2xl text-gray-600  mt-5">
                   {view.text}
                 </h2>
@@ -115,9 +119,11 @@ const CoursesDetails = () => {
                   <Link to={view.link}>View Course</Link>{" "}
                 </button>
 
+                </div>
                 {/* <button> <Link to={view.link2}></Link></button> */}
               </div>
             ))}
+
           </div>
           </div>
         </div>

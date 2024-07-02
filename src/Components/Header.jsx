@@ -8,7 +8,7 @@ function Header() {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
-    <nav className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 sticky top-0 z-20">
+    <nav className="bg-black bg-opacity-10 backdrop-filter backdrop-blur-lg p-4 sticky top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="/"

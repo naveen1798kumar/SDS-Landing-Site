@@ -11,12 +11,9 @@ import CourseDetails7 from './Coursecomponent/CourseDetails7.jsx';
 
 
 
-
-
-
 function Courses() {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <CourseDetails/>
       <CourseDetails1/>
       <CourseDetails2/>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OurService = () => {
   return (
@@ -9,7 +10,8 @@ const OurService = () => {
       </div>
       <div>
         <h1 className="text-sm font-bold text-amber-600">Click here</h1>
-        {/* <Button><Link to="/contact">Contact Us</Link></Button> */}
+        <button><Link to="/contact">Contact Us</Link></button>
+        {/* <button></button> */}
       </div>
     </div>
   );
