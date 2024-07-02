@@ -6,7 +6,7 @@ import { SiInstagram } from "react-icons/si";
 const Aboutcom7 = () => {
   return (
     <>
-    <div className='w-[100%] h-auto flex justify-center items-center'>
+    <div className='w-[100%] h-auto flex justify-center items-center'data-aos="zoom-in">
         <div className='w-[50%] flex justify-center items-center gap-10 p-10'>
             <div className='font-semibold text-3xl bg-gray-400  rounded-full p-3 hover:bg-blue-600 hover:text-white'>< FaFacebookF/></div>
             <div  className='font-semibold text-3xl bg-gray-400 rounded-full p-3  hover:bg-green-600 hover:text-white'><BsWhatsapp/></div>
