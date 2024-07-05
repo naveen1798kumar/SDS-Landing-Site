@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function ServiceCard({ title, description, Icon, link }) {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <motion.div
       className="p-4 border rounded-lg shadow-md transition-shadow bg-cover bg-center"
@@ -46,7 +51,7 @@ function ServiceCard({ title, description, Icon, link }) {
         }}
         className="mt-4 inline-block px-4 py-2 border border-blue-500 text-blue-500 rounded"
       >
-        <Link to={link} className="block">
+        <Link to={link} className="block" onClick={scrollToTop}>
           Click for More
         </Link>
       </motion.div>

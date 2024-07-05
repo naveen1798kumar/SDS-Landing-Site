@@ -1,14 +1,11 @@
 import React from "react";
-import "./CourseDetails.css";
 import offiapp from "../../assets/offiapp.jpg";
 import app from "../../assets/app.jpg";
 import autocad from "../../assets/autocad.jpg";
 import AI from "../../assets/AI.jpg";
 import lap2 from "../../assets/lap2.jpg";
 import lap1 from "../../assets/lap1.jpg";
-import lap from "../../assets/lap.jpg";
 import program from "../../assets/program.jpg";
-
 import { Link } from "react-router-dom";
 
 const course = [
@@ -47,11 +44,10 @@ const course = [
     image: autocad,
     link: "/CAD",
   },
-
   {
     id: 4,
     text: "MLP",
-    text1: "(Mechine Learning Programming)",
+    text1: "(Machine Learning Programming)",
     image: program,
     link: "/MLP",
   },
@@ -72,63 +68,55 @@ const course = [
   {
     id: 5,
     text: "Tally",
-    // text1:"(Diploma in Hardware Technology)",
     image: lap1,
     link: "/Tally",
   },
 ];
 
 const CoursesDetails = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <>
-      <div className="cd w-[100%] h-auto bg-[rgba(250,250,250)] p-3 ">
-        <div className="cdhead2 flex  flex-col justify-center items-center text-center mt-10  ">
-          <h2 className=" font-bold md:text-5xl text-4xl text-gray-700 mb-5">
-            Explore our Courses
-          </h2>
-          <h3 className=" font-semibold md:text-2xl text-xl text-gray-500  mb-3">
-            Enhance Your <span className="text-yellow-600">Skills </span> with
-            us , and upgrade your knowledge with our experienced tutor members.
+    <div className="w-full bg-gray-100 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-gray-700 mb-5">Explore our Courses</h2>
+          <h3 className="text-xl font-semibold text-gray-500 mb-3">
+            Enhance Your <span className="text-yellow-600">Skills</span> with us, and upgrade your knowledge with our experienced tutor members.
           </h3>
         </div>
-
-        <div className="mainbox w-[100%] h-auto flex flex-col justify-center items-center p-10">
-        <div className='flex justify-center items-center '>
-          <div className="cdetails w-[100%] h-auto grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3  gap-10">
-            
-            {course.map((view) => (
-              <div className="box w-[350px] h-[400px] text-center bg-white  rounded-xl hover:text-blue-500 shadow-black shadow  ">
-                <div>
-                <img
-                  className="w-[400px] h-[250px] rounded-xl "
-                  src={view.image}
-                  alt=""
-                />
-                </div>
-
-                <div>
-                <h2 className="head font-semibold text-2xl text-gray-600  mt-5">
-                  {view.text}
-                </h2>
-                <p className="head font-semibold text-lg text-gray-600 mb-3">
-                  {view.text1}
-                </p>
-
-                <button className="button bg-transparent text-gray-600  border-2 border-gray-200 hover:ease-linear-to-r duration-500 px-3 py-2 rounded-2xl hover:bg-blue-500  hover:border-none hover:text-white">
-                  {" "}
-                  <Link to={view.link}>View Course</Link>{" "}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {course.map((view) => (
+              <div
+              key={view.id}
+              className="relative h-[350px] border-2 border-gray-400 rounded-2xl overflow-hidden cursor-pointer shadow transition duration-150 ease-in-out group"
+            >
+              <img
+                src={view.image}
+                alt={view.text}
+                className="w-full h-full object-cover object-center rounded-xl transform transition duration-150 ease-in-out group-hover:h-48"
+              />
+              <div className="absolute inset-0 flex flex-col justify-end z-10 p-4">
+                <h2 className="text-2xl font-semibold text-white mt-5">{view.text}</h2>
+                <p className="text-lg font-semibold text-white mb-3">{view.text1}</p>
+                <button className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-150 ease-out border-2 border-white rounded-2xl shadow-md group">
+                  <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-150 -translate-x-full bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:translate-x-0 ease">
+                    <Link to={view.link} onClick={scrollToTop}>View Course</Link>
+                  </span>
+                  <span className="absolute flex items-center justify-center w-full h-full bg-blue-100 text-black transition-all duration-150 transform group-hover:translate-x-full ease">
+                    <Link to={view.link} onClick={scrollToTop}>View Course</Link>
+                  </span>
+                  <span className="relative invisible">View Course</span>
                 </button>
-
-                </div>
-                {/* <button> <Link to={view.link2}></Link></button> */}
               </div>
-            ))}
-
-          </div>
-          </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-0"></div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

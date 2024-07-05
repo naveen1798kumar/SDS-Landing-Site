@@ -13,14 +13,14 @@ const CourseDetails2 = () => {
           </div>
         <div className="we1 w-[100%] h-auto  text-gray-700 text-lg p-10 grid grid-cols-1 md:grid-cols-2 md:gap-10 py-20">
           
-          <div>
+          <div data-aos="fade-up">
             <img
               className="lg:w-[50vw] lg:h-auto md:w-[400px] md:h-[400px] w-[100%] h-auto "
               src={offitheme1}
               alt=""
             />
            </div>
-           <div className=" w-[100%] h-auto text-2xl flex justify-center items-center  font-semibold  p-5  ">
+           <div className=" w-[100%] h-auto text-2xl flex justify-center items-center  font-semibold  p-5  " data-aos="fade-up">
             <ul className="leading-loose">
               <li className="flex  items-center gap-2">
                 <TiTick className="text-blue-500" />

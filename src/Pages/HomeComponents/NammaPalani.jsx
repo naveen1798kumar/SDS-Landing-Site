@@ -6,7 +6,7 @@ import { FaBriefcase } from 'react-icons/fa';
 const NammaPalani = () => {
   return (
     <>
-       <div className="w-full mt-10 h-auto min-h-screen bg-slate-600 flex flex-col md:flex-row rounded-lg bg-opacity-20 backdrop-blur-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+       <div className="w-full mt-10 h-auto min-h-screen bg-slate-500 flex flex-col md:flex-row rounded-tl-2xl rounded-tr-2xl bg-opacity-20 backdrop-blur-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
       
 
           {/* Image Section */}

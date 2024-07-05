@@ -19,7 +19,10 @@ module.exports = {
           800: 'rgba(255, 255, 255, 0.9)',
           900: 'rgba(255, 255, 255, 1)',
         }
-      }
+      },
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

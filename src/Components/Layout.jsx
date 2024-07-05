@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import ScrollToTopButton from './ScrollToTopButton';
 
 function Layout() {
   return (
@@ -11,6 +12,7 @@ function Layout() {
       </div>
       <main className="relative flex-grow -mt-16 z-10">
         <Outlet />
+        <ScrollToTopButton/>
       </main>
       <Footer />
     </div>

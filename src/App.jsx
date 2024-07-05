@@ -11,6 +11,7 @@ import Courses from './Pages/Courses';
 import Layout from './Components/Layout';
 import Loading from './Components/Loading'; // Import the Loading component
 
+
 // 
 
 import Web from './Pages/CourseDetails/Web'
@@ -48,6 +49,7 @@ function App() {
   }
 
   return (
+    
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />

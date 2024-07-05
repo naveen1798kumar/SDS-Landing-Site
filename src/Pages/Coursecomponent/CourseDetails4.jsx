@@ -6,8 +6,8 @@ const CourseDetails4 = () => {
   return (
     <>
       <div className="w-[100%] h-auto  ">
-        <div className="learn w-[100%] h-auto  text-[rgba(248,246,248)] px-10 py-10">
-          <div className="learn1 w-[100% ]  h-auto px-10 py-10">
+        <div className="learn w-[100%] h-auto  text-[rgba(248,246,248)] px-10 py-10" data-aos="fade-left" data-aos-duration="500">
+          <div className="learn1 w-[100% ]  h-auto px-10 py-10" data-aos="fade-right" data-aos-duration="500">
             <h2 className="lg:text-5xl w-[100%] text-4xl font-semibold p-5 mb-5">
               What You'll Learn
             </h2>

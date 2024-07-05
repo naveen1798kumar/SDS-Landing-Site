@@ -7,6 +7,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../index.css";
 
+import { FaRegArrowAltCircleDown } from "react-icons/fa";
+
+function scrollToSection() {
+  const section = document.getElementById('target-section');
+  if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
 const Hero = () => {
   useEffect(() => {
     AOS.init({
@@ -22,7 +32,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     fade: true,
   };
 
@@ -35,25 +45,28 @@ const Hero = () => {
         <Slider {...settings}>
           <div>
             <h1 className="text-5xl font-bold mb-4" data-aos="fade-right" data-aos-delay="500">
-              Welcome to <span className='text-red-400 font-extrabold'>SDS</span> Technologies
+              Welcome to <span className='gradient-text font-extrabold'>SDS</span> Technologies
             </h1>
           </div>
           <div>
             <h1 className="text-5xl font-bold mb-4" data-aos="fade-left" data-aos-delay="500">
-              Explore <span className='text-red-400 font-extrabold'>Our Projects</span>
+              Explore <span className='gradient-text font-extrabold'>Our Projects</span>
             </h1>
           </div>
           <div>
             <h1 className="text-5xl font-bold mb-4" data-aos="fade" data-aos-delay="500">
-              About <span className='text-red-400 font-extrabold'>Us</span>
+              Experience our <span className='gradient-text font-extrabold'>Namma Palani</span> Mobile App
             </h1>
           </div>
         </Slider>
         <p className="text-2xl mb-8">
           We're glad you're here. Discover amazing content and join our community!
         </p>
-        <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition duration-300">
-          Get Started
+        <button onClick={scrollToSection} className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:bg-gradient-to-l text-white font-semibold py-2 px-4 rounded transition duration-300">
+         <div className='flex items-center gap-2 font-bold text-xl text-white hover:text-black
+'>
+         <span className='text-2xl'>Get Started</span><span className='text-2xl animate-bounce'><FaRegArrowAltCircleDown/></span>
+         </div>
         </button>
       </div>
     </section>

@@ -39,3 +39,9 @@
     animation: spinX 2s linear infinite;
   }
   
+
+  .gradient-text {
+    background: linear-gradient(to right, #6366F1, #A855F7); /* from-indigo-500 to-purple-500 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
