@@ -10,7 +10,9 @@ const Loading = () => {
     <div className="flex items-center justify-center h-screen bg-white ">
       <FaSpinner className="text-blue-500 animate-spin" size={88} />
       {/* <img src={Spinner} alt=""  width={"100px"} height={"100px"} className="text-blue-500 animate-spinX"/> */}
-
+      <h2 className="text-2xl m-5 font-bold text-gray-900 transition-all duration-300 hover:text-blue-500 hover:scale-110 cursor-pointer"
+        >
+          SDS Technologies</h2>
     </div>
   );
 };
