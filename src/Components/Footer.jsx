@@ -33,7 +33,7 @@ function Footer() {
 
     {/* Navigation */}
     <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg">
-    <div className='lg:w-2/5 relative'>
+    <div className='md:w-full w-2/5 relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative inline-block">Page Links
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
       </h3>
@@ -61,17 +61,17 @@ function Footer() {
 
     {/* Contact Information */}
     <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg">
-    <div className='lg:w-2/5 relative'>
+    <div className='md:w-full w-2/5 relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative ">Our Other Links
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
       </h3>
       </div>
       <ul className="text-white space-y-2">
-      <li className="flex items-center hover:text-gray-500 transition-colors duration-300">
+      <li className="flex items-center hover:text-black transition-colors duration-300">
           <FaHome className="mr-2" />
           <Link to="/">Namma Palani </Link>
         </li>
-        <li className="flex items-center hover:text-gray-500 transition-colors duration-300">
+        <li className="flex items-center hover:text-black transition-colors duration-300">
           <FaServicestack className="mr-2" />
           <a href='https://nammapalani.org.in/' target='blank'>Namma Palani Store</a>
         </li>
@@ -81,7 +81,7 @@ function Footer() {
     {/* Location and Address */}
     {/* md:col-span-4 */}
     <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg ">
-      <div className='lg:w-2/5 relative'>
+      <div className='md:w-full w-2/5 relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative inline-block">Location
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
       </h3>
@@ -94,7 +94,7 @@ function Footer() {
 
     {/* Social medias */}
     <div className='flex justify-evenly items-evenly gap-5 lg:gap-10 w-full p-6 mt-6 flex-col lg:flex-row rounded-lg shadow-lg bg-gray-400 bg-opacity-30 backdrop-blur-lg'>
-    <div className='lg:w-2/5 text-center relative'>
+    <div className='md:w-2/5 text-center relative'>
   <h2 className='font-bold text-2xl mb-2 font-montserrat relative inline-block'>
     Our Social-Media Handles
     <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
