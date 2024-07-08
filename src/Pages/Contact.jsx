@@ -45,8 +45,8 @@ function Contact() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-lg">
-        <h1 className="text-2xl font-bold mb-6">Contact Us</h1>
+      <div className="bg-white mt-20 mb-10 p-8 rounded-xl shadow-md w-full max-w-lg">
+        <h1 className="text-2xl font-bold mb-6">Service Form</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

@@ -24,20 +24,20 @@ function Header() {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-400 hover:text-gray-700 text-lg"
+                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-extrabold text-xl"
+                  : "text-black hover:text-blue-400 text-xl font-bold"
               }
             >
               Home
             </NavLink>
-          </li>
+          </li>  
           <li>
             <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-400 hover:text-gray-700 text-lg"
+                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-extrabold text-xl"
+                  : "text-black hover:text-blue-400 text-xl font-bold"
               }
             >
               About
@@ -48,8 +48,8 @@ function Header() {
               to="/services"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-400 hover:text-gray-700 text-lg"
+                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-extrabold text-xl"
+                  : "text-black hover:text-blue-400 text-xl font-bold"
               }
             >
               Services
@@ -60,25 +60,24 @@ function Header() {
               to="/courses"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-400 hover:text-gray-700 text-lg"
+                  ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-extrabold text-xl"
+                  : "text-black hover:text-blue-400 text-xl font-bold"
               }
             >
               Courses
             </NavLink>
           </li>
           <li>
-
-              {/* 
-                       <button className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:scale-110 text-white font-bold py-2 px-4 rounded-full text-lg">
-  <Link to="/contact" className="text-white">Contact Us</Link>
-</button>
-
-              */}
-
-            <Link to="/contact" className="text-gray-400 hover:text-gray-700 text-lg">
+ 
+   <button className="md:ml-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:scale-110 text-white font-bold py-2 px-4 rounded-full text-lg">
+   <Link to="/contact" className=" text-lg">
               Contact Us
             </Link>
+</button>
+
+            
+
+            
           </li>
         </ul>
 
