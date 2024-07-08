@@ -15,9 +15,9 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-indigo-500  to-purple-500  p-8 h-auto zoom-animation" >
+    <footer className="bg-gradient-to-r from-indigo-400  to-purple-500 p-8 h-auto zoom-animation" >
 
-      <div className='bg-white bg-opacity-20 backdrop-blur-lg p-8 rounded-xl' >
+      <div className='bg-black bg-opacity-20 backdrop-blur-xl p-8 rounded-xl' >
 
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 ">
     {/* Logo */}
@@ -32,8 +32,8 @@ function Footer() {
     </div>
 
     {/* Navigation */}
-    <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg">
-    <div className='md:w-full w-2/5 relative'>
+    <div className="flex flex-col justify-start p-6 ">
+    <div className='md:w-full  relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative inline-block">Page Links
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
       </h3>
@@ -60,8 +60,8 @@ function Footer() {
     </div>
 
     {/* Contact Information */}
-    <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg">
-    <div className='md:w-full w-2/5 relative'>
+    <div className="flex flex-col justify-start p-6 ">
+    <div className='md:w-full relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative ">Our Other Links
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
       </h3>
@@ -80,7 +80,7 @@ function Footer() {
 
     {/* Location and Address */}
     {/* md:col-span-4 */}
-    <div className="flex flex-col justify-center p-6 rounded-lg shadow-lg ">
+    <div className="flex flex-col justify-start p-6 rounded-lg shadow-lg ">
       <div className='md:w-full w-2/5 relative'>
       <h3 className="text-lg font-bold mb-4 font-montserrat relative inline-block">Location
       <span className="absolute bottom-0 left-0 w-1/2 md:w-3/4 h-[2px] bg-gradient-to-r from-red-500 to-transparent"></span>
@@ -93,7 +93,7 @@ function Footer() {
   </div>
 
     {/* Social medias */}
-    <div className='flex justify-evenly items-evenly gap-5 lg:gap-10 w-full p-6 mt-6 flex-col lg:flex-row rounded-lg shadow-lg bg-gray-400 bg-opacity-30 backdrop-blur-lg'>
+    <div className='flex justify-evenly items-evenly gap-5 lg:gap-10 w-full p-6 my-6 flex-col lg:flex-row rounded-lg shadow-lg bg-gray-100 bg-opacity-30 backdrop-blur-lg'>
     <div className='md:w-2/5 text-center relative'>
   <h2 className='font-bold text-2xl mb-2 font-montserrat relative inline-block'>
     Our Social-Media Handles
@@ -128,7 +128,7 @@ function Footer() {
 {/* <hr className='  mt-8 '/> */}
   {/* Bottom Disclaimer */}
   <div className="container mx-auto mt-4 text-xl  text-center">
-    <p><span className='font-montserrat font-bold text-2xl'>&copy; </span>Copyright 2024 - <span className='font-montserrat font-bold text-white'>SDS Solutions .</span> All rights reserved.</p>
+    <p><span className='font-montserrat font-bold text-2xl'>&copy; </span>Copyright 2024 - <span className='font-montserrat font-bold text-white hover:text-blue-300 cursor-pointer'>SDS Solutions .</span> All rights reserved.</p>
     {/* <p>
       <span className="text-white hover:text-gray-300">Privacy Policy</span> | 
       <span className="text-white hover:text-gray-300"> Terms of Service</span>

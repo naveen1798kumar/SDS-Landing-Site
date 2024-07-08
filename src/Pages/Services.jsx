@@ -89,7 +89,7 @@ function ServicesComponent() {
         </div>
       </div>
 
-      <div className='h-[50vh] p-20 flex justify-center items-center' data-aos="fade-up" data-aos-delay="200">
+      <div className='h-[50vh] p-20 flex justify-center items-center bg-amber-200' data-aos="fade-up" data-aos-delay="300">
         <p className='text-4xl text-blue-400 hover:scale-100'>Your vision, our expertise – together we create magic online.</p>
       </div>
     </>

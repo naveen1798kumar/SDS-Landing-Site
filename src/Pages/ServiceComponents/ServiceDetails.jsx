@@ -24,12 +24,12 @@ function ServiceDetail() {
       description: `
         We specialize in building responsive, high-performance websites that meet your business needs. 
         Our web development services include frontend and backend development, ensuring a seamless user experience and robust functionality. 
-        We use the latest technologies and frameworks such as React, Angular, and Vue.js for frontend development and Node.js, Django, and Ruby on Rails for backend development.
+        We use the latest technologies and frameworks such as React or Angular for frontend development and Node.js, Django, and Ruby on Rails for backend development.
       `,
       requirements: [
         'Proficiency in HTML, CSS, and JavaScript',
-        'Experience with frontend frameworks like React, Angular, or Vue.js',
-        'Knowledge of backend technologies like Node.js, Django, or Ruby on Rails',
+        'Experience with frontend frameworks like React or Angular',
+        'Knowledge of backend technologies like Node.js or Django',
         'Understanding of responsive design principles',
         'Familiarity with version control systems like Git'
       ],
@@ -45,8 +45,7 @@ function ServiceDetail() {
         From ideation to deployment, we ensure that your app is user-friendly, efficient, and scalable.
       `,
       requirements: [
-        'Experience with native mobile development (Swift for iOS, Kotlin for Android)',
-        'Proficiency in cross-platform frameworks like React Native or Flutter',
+        'Experience in cross-platform frameworks like React Native or Flutter',
         'Strong understanding of mobile UI/UX design principles',
         'Familiarity with app deployment on App Store and Google Play',
         'Knowledge of mobile performance optimization techniques'
@@ -158,7 +157,7 @@ function ServiceDetail() {
       </div>
 
       {service.component && (
-        <div className="my-6 p-10 bg-gray-200 rounded-lg shadow-md" data-aos="fade-up">
+        <div className="my-6 py-10 bg-gray-200 rounded-lg shadow-md" data-aos="fade-up">
           {service.component}
         </div>
       )}

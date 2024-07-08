@@ -9,6 +9,11 @@ import WebBan5 from "../../../assets/Website-List/school.jpg";
 import WebBan6 from "../../../assets/Website-List/entertainment.jpg";
 import WebBan7 from "../../../assets/Website-List/eventsite.jpg";
 
+import Proj1 from "../../../assets/Website-List/Projects/SDS.jpg"
+import Proj2 from "../../../assets/Website-List/Projects/greenappleglobal.jpg"
+import Proj3 from "../../../assets/Website-List/Projects/surabhi.jpg"
+import Proj4 from "../../../assets/Website-List/Projects/Sowbagya.jpg"
+
 const webTemplates = [
   { title: 'Blogging Website', description: 'A perfect platform for your blogs.', image: WebBan },
   { title: 'Portfolio Site', description: 'Showcase your work and projects.', image: WebBan2 },
@@ -18,6 +23,13 @@ const webTemplates = [
   { title: 'Entertainment Site', description: 'Platform for entertainment content.', image: WebBan6 },
   { title: 'Non-Profit Website', description: 'Raise awareness for your cause.', image: WebBan7 },
 ];
+
+const projectTemp = [
+  { title: "Namma Palani", image: Proj1, link: "https://nammapalani.org.in/" },
+  { title: "Green Apple", image: Proj2, link: "https://greenappleglobal.com/" },
+  { title: "Suarbhi Fencing", image: Proj3, link: "https://sds-surabhi.vercel.app/" },
+  { title: "Sowbagya", image: Proj4, link: "https://sowbagyafurniture.in/" },
+]
 
 const technologies = {
   frontend: ['React', 'Tailwind CSS', 'Bootstrap'],
@@ -45,7 +57,8 @@ function WebDev() {
           </h3>
     </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:p-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-gray-300 gap-8 lg:p-8">
+
   {webTemplates.map((template, index) => (
   <div
   key={index}
@@ -75,13 +88,61 @@ function WebDev() {
 </div>
 
   ))}
+
 </section>
 
+<div 
+        className='bg-gray-500 font-montserrat text-[30px] font-bold text-center p-16 my-10 text-blue-300' 
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        "Choose a template or Let us design you a Own site".
+      </div>
 
-  <div>
-  <h1 className='text-4xl text-center font-bold text-gray-700 mb-5'>Our Projects</h1>
+{/*  */}
+{/*  */}
+
+
+  <h1 className='text-4xl text-center font-bold text-gray-700 mb-5' 
+            data-aos="fade-down" 
+            data-aos-delay="400"
+        >
+          Our Projects
+  </h1>
+
+      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-gray-300 gap-8 lg:p-8'>
+       
+        {projectTemp.map((template, index) => (
+  <div
+  key={index}
+  className="relative bg-black border-2 border-gray-300 rounded-lg shadow-lg w-80 h-56 transform transition-transform duration-300 hover:scale-110 hover:shadow-4xl overflow-hidden group"
+  data-aos="fade-up"
+  data-aos-delay={index * 100}
+  style={{
+    backgroundImage: `url(${template.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  <div className="absolute inset-0 bg-black bg-opacity-70 p-4 flex flex-col justify-end transform transition-transform duration-500 z-30 translate-y-full group-hover:translate-y-0">
+    
+    <a href={template.link} target="_blank" rel="noopener noreferrer" className="text-center text-gray-200 mb-4 bg-blue-600 rounded-xl p-4">
+    Visit Site
+    </a>
+
   </div>
 
+  <div className="absolute bottom-0 left-0 w-full h-20 bg-gray-800 bg-opacity-50 flex items-center justify-center text-white tracking-wider font-black text-2xl underline transition-opacity duration-300 opacity-100 group-hover:opacity-0"   
+  >
+
+  {template.title}
+  </div>
+</div>
+
+  ))}
+
+      </section>
 
       {/* <section className="p-8">
         <div className="flex justify-center mb-4">
@@ -117,6 +178,7 @@ function WebDev() {
           ))}
         </div>
       </section> */}
+
     </div>
   );
 }

@@ -13,6 +13,8 @@ function Home() {
       <div className="p-6 flex flex-col justify-center items-center overflow-hidden" data-aos="fade-up">
         <Hero />
         <AboutHome/>
+
+
         <div className="w-full mt-10">
           <ul className="bg-slate-200 rounded-lg p-2 mx-auto w-full flex flex-wrap justify-around">
             <li className="border-black border-2 w-auto px-12 my-4 rounded-xl hover:rounded-lg hover:scale-110 transition-transform duration-300 p-2 md:max-w-[250px]">
@@ -35,6 +37,8 @@ function Home() {
             </li>
           </ul>
         </div>
+
+        
         <NammaPalani/>
         <ServiceComp/>
         <Testimonials/>

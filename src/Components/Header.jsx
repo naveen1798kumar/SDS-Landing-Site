@@ -25,7 +25,7 @@ function Header() {
               className={({ isActive }) =>
                 isActive
                   ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-900 hover:text-gray-700 text-lg"
+                  : "text-gray-400 hover:text-gray-700 text-lg"
               }
             >
               Home
@@ -37,7 +37,7 @@ function Header() {
               className={({ isActive }) =>
                 isActive
                   ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-900 hover:text-gray-700 text-lg"
+                  : "text-gray-400 hover:text-gray-700 text-lg"
               }
             >
               About
@@ -49,7 +49,7 @@ function Header() {
               className={({ isActive }) =>
                 isActive
                   ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-900 hover:text-gray-700 text-lg"
+                  : "text-gray-400 hover:text-gray-700 text-lg"
               }
             >
               Services
@@ -61,7 +61,7 @@ function Header() {
               className={({ isActive }) =>
                 isActive
                   ? "text-blue-500 border-b-2 border-blue-500 pb-2 font-bold text-lg"
-                  : "text-gray-900 hover:text-gray-700 text-lg"
+                  : "text-gray-400 hover:text-gray-700 text-lg"
               }
             >
               Courses
@@ -76,7 +76,7 @@ function Header() {
 
               */}
 
-            <Link to="/contact" className="text-gray-900 hover:text-gray-700 text-lg">
+            <Link to="/contact" className="text-gray-400 hover:text-gray-700 text-lg">
               Contact Us
             </Link>
           </li>

@@ -10,7 +10,7 @@ function ServiceCard({ title, description, Icon, link }) {
 
   return (
     <motion.div
-      className="p-4 border rounded-lg shadow-md transition-shadow bg-cover bg-center"
+      className="p-4 border rounded-lg shadow-md bg-white transition-shadow bg-cover bg-center"
 
       whileHover={{
         scale: 1.05,
